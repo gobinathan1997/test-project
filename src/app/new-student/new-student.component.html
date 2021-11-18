@@ -1,0 +1,13 @@
+<div>
+    
+    <input type="text" placeholder="Name" [(ngModel)]="name">
+    <input type="text" placeholder="code"[(ngModel)]="code">
+<p>
+    <label>Is subject is in current sem</label>
+    <input type="checkbox"[(ngModel)]="isInCurrentSem">
+</p>
+
+<input type="text" placeholder="List of teachers"[(ngModel)]="teachers">
+<button (click)="onSave()">Save</button>
+    
+</div>

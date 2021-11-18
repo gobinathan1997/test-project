@@ -1,0 +1,52 @@
+{
+  "subject": [
+    {
+      "id": 2,
+      "name": "maths",
+      "code": "mat-100",
+      "teachers": [
+        "anbu",
+        "alagu",
+        "arivu"
+      ],
+      "isInCurrentSem": false,
+      "color": "green"
+    },
+    {
+      "id": 3,
+      "name": "English",
+      "code": "Eng-100",
+      "teachers": [
+        "anbu",
+        "alagu",
+        "arivu"
+      ],
+      "isInCurrentSem": true,
+      "color": "blue"
+    },
+    {
+      "name": "Computer Science",
+      "code": "com-111",
+      "teachers": [
+        "balaji",
+        "badri",
+        "bala"
+      ],
+      "isInCurrentSem": false,
+      "id": 5,
+      "color": ""
+    },
+    {
+      "name": "tamil",
+      "code": "tam-001",
+      "teachers": [
+        "gobi",
+        "arvind",
+        "balu"
+      ],
+      "isInCurrentSem": true,
+      "id": 6,
+      "color": ""
+    }
+  ]
+}

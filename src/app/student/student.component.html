@@ -1,0 +1,8 @@
+<div [ngClass]="{ 'active-subject': subject.isInCurrentSem }">
+  <span>
+    <p>Name:{{ subject.name }}</p>
+    <p>Code:{{ subject.code }}</p>
+    <p>Teachers:{{ subject.teachers }}</p>
+  </span>
+  <button (click)="onDelete(subject.id)">Remove</button>
+</div>
