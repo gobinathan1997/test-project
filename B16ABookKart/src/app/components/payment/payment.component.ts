@@ -16,7 +16,7 @@ export class PaymentComponent implements OnInit {
   logout(){
     let token:any = localStorage.clear()
     if(!token){
-      this.router.navigate(["login"])
+      this.router.navigate(["logi"])
    }
  }
 }

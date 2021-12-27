@@ -13,6 +13,12 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthorizeInterceptor } from './guard/authorize.interceptor';
+import { OrdersComponent } from './components/orders/orders.component';
+import { MaterialModule } from './material/material.module';
+import { LoginService } from './services/login.service';
+import { LogiComponent } from './components/logi/logi.component';
+import { FilterPipe } from './services/filter.pipe';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -21,17 +27,22 @@ import { AuthorizeInterceptor } from './guard/authorize.interceptor';
     PaymentComponent,
     LoginComponent,
     HomeComponent,
+    OrdersComponent,
+    LogiComponent,
+    FilterPipe,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    MaterialModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
   providers: [
+    LoginService,
     AuthService,
     AuthGuard,
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },

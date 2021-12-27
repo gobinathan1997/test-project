@@ -4,6 +4,7 @@ import { from, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { ThisReceiver } from '@angular/compiler';
+import { book } from './user.model';
 
 
 @Injectable({
@@ -11,6 +12,7 @@ import { ThisReceiver } from '@angular/compiler';
 })
 export class AuthService {
   users: string = 'https://bookcart.azurewebsites.net/api/Login';
+  books = 'https://bookcart.azurewebsites.net/api/Book'
   
   
 
@@ -27,8 +29,10 @@ export class AuthService {
     
   }
 
+  getBooks() : Observable<book[]>{
+          return this.http.get<book[]>(this.books);
+  }
   
-
 
 
 }

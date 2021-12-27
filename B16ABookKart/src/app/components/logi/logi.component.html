@@ -1,0 +1,34 @@
+<div class="forms">
+  <mat-card class="card">
+    <mat-toolbar color="primary">
+      <span>Login Form</span>
+    </mat-toolbar>
+
+    <forms [formGroup]="loginForm" class="logi">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>username</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="username"
+          formControlName="username"
+        />
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>password</mat-label>
+        <input
+          matInput
+          type="password"
+          placeholder="password"
+          value="password"
+          formControlName="password"
+        />
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary" (click)="submit()">
+        Submit
+      </button>
+    </forms>
+  </mat-card>
+</div>

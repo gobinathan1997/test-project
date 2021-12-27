@@ -1,0 +1,55 @@
+<!-- <li *ngFor =" let user of books" >
+     {{user.bookId}}
+ </li> -->
+<!-- <mat-chip-list aria-label="Fish selection" *ngFor =" let user of books">
+    <mat-chip>{{user.bookId}}</mat-chip><br>
+    <mat-chip>{{user.author}}</mat-chip><br>
+    <mat-chip color="primary" selected>{{user.category}}</mat-chip><br>
+    <mat-chip color="accent" selected>{{user.price}}</mat-chip><br>
+  </mat-chip-list>
+   -->
+
+   <mat-form-field appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput value="Sushi" name="favorite-food" [(ngModel)]= "searchText">
+  </mat-form-field>
+  
+
+<table
+  mat-table
+  [dataSource]="books | filter: searchText "
+  
+  class="mat-elevation-z8"
+>
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="bookId" >
+    <th mat-header-cell *matHeaderCellDef>book id</th>
+    <td mat-cell *matCellDef="let book">{{ book.bookId }}</td>
+
+    </ng-container>
+
+    <ng-container matColumnDef="title"   >
+      <th mat-header-cell *matHeaderCellDef>title</th>
+      <td mat-cell *matCellDef="let book ">{{ book.title }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="author"   >
+        <th mat-header-cell *matHeaderCellDef>Author</th>
+        <td mat-cell *matCellDef="let book ">{{ book.author }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="category"   >
+          <th mat-header-cell *matHeaderCellDef>Category</th>
+          <td mat-cell *matCellDef="let book">{{ book.category }}</td>
+          </ng-container>
+          <ng-container matColumnDef="price"   >
+            <th mat-header-cell *matHeaderCellDef>Price</th>
+            <td mat-cell *matCellDef="let book">{{ book.price }}</td>
+          </ng-container>
+       
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
