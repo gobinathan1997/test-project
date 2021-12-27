@@ -1,18 +1,6 @@
 {
   "subject": [
     {
-      "id": 2,
-      "name": "maths",
-      "code": "mat-100",
-      "teachers": [
-        "anbu",
-        "alagu",
-        "arivu"
-      ],
-      "isInCurrentSem": false,
-      "color": "green"
-    },
-    {
       "id": 3,
       "name": "English",
       "code": "Eng-100",
@@ -46,6 +34,30 @@
       ],
       "isInCurrentSem": true,
       "id": 6,
+      "color": ""
+    },
+    {
+      "name": "gobi",
+      "code": "001",
+      "teachers": [
+        "arvind",
+        "gopi",
+        "thillan"
+      ],
+      "isInCurrentSem": true,
+      "id": 7,
+      "color": ""
+    },
+    {
+      "name": "gobinath",
+      "code": "908",
+      "teachers": [
+        "sandhya",
+        "bava",
+        "vas"
+      ],
+      "isInCurrentSem": false,
+      "id": 8,
       "color": ""
     }
   ]
